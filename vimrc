@@ -1,0 +1,1 @@
+/home/lenno/.vim/vimrc

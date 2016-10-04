@@ -1,0 +1,91 @@
+" activate pathogen plugin manager
+execute pathogen#infect()
+" activate line counting
+set number
+
+" add colored column at 90
+set colorcolumn=90
+
+" set leader key
+let mapleader = "ß"
+
+" add shortcut for realoding vim config without restarting
+" map <leader>s :source ~/.vimrc<CR>
+
+" keep more info in memory to speed things up
+set hidden
+set history=100
+
+" indenting
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set autoindent
+
+" remove trailing(extra & unnes.) whitespaces
+autocmd BufWritePre * :%s/\s\+$//e
+
+" highlight search results
+set hlsearch
+
+" cancel search with escape -> this causes problems
+" nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+
+" show matching parenthesis
+set showmatch
+
+" activate arrow keys -> not needed atm
+"map <D-A-RIGHT> <C-w>l
+"map <D-A-LEFT> <C-w>h
+"map <D-A-DOWN> <C-w><C-w>
+"map <D-A-UP> <C-w>W
+
+" open nerdtree automatically
+" autocmd vimenter * NERDTree
+
+" toggle nerdtree with ctrl n
+map <C-t> :NERDTreeToggle<CR>
+
+" display status line always
+:set laststatus=2
+if !has('gui_running')
+    set t_Co=256
+    endif
+
+" hide vims default status line
+set noshowmode
+
+" enable syntax highlighting, set background and colorscheme
+syntax enable
+set background=dark
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
+colorscheme hybrid
+
+" fix backspace key
+set backspace=2
+
+" activate autocompletion for .js , .css and .html files
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+" set Tab as leader key for emmet (still need to press ',' after leader key"
+let g:user_emmet_leader_key='<Tab>'
+
+" display nerdtree on right site of the screen
+let g:NERDTreeWinPos = "right"
+
+" set ctrl+s as :w in every mode
+silent !stty -ixon
+autocmd VimLeave * silent !stty ixon
+"inoremap <c-s> <Esc>:w<CR>
+:nmap <c-s> :w<CR>
+:imap <c-s> <Esc>:w<CR>
+
+" set blinkrate for cursor, not sure if this has any actual effect
+:set guicursor=n-v-i:blinkwait50-blinkon400-blinkoff90
+
+"iii
