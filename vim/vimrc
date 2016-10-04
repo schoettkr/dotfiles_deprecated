@@ -73,7 +73,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " set Tab as leader key for emmet (still need to press ',' after leader key"
-let g:user_emmet_leader_key='<Tab>'
+"let g:user_emmet_leader_key='<Tab>'
 
 " display nerdtree on right site of the screen
 let g:NERDTreeWinPos = "right"
