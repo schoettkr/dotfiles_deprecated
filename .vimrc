@@ -35,7 +35,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'eparreno/vim-l9'
 " Auto pop up completion suggestions
   Plug 'othree/vim-autocomplpop'
-"
+
+" Theme
+  " Plug 'kristijanhusak/vim-hybrid-material'
 " DelimitMate (Auto-completion for quotes, parens, brackets etc.)
   " Plug 'Raimondi/delimitMate'
 
@@ -88,6 +90,9 @@ call plug#end()
       autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
       autocmd BufEnter * match OverLength /\%115v.*/
      augroup END
+
+     highlight MatchParen ctermfg=red
+
 " End General
 
 " Omnicomplete
@@ -155,3 +160,11 @@ call plug#end()
 "
 " End Indent Guides
 " =====================================
+
+
+" =====================================
+" VIM Theme
+  " set t_Co=256
+  " let g:hybrid_custom_term_colors = 1
+  " colorscheme hybrid
+  " set background=dark

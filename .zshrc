@@ -88,7 +88,13 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# Make statusline in vim colorful
+# Make statusline in vim colorful aka add 265 color support
  export TERM=xterm-256color
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+        export TERM='xterm-256color'
+else
+        export TERM='xterm-color'
+fi
+
 
 
