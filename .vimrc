@@ -1,4 +1,5 @@
 " =====================================
+" sdadad
 " Vim Plug
 " =====================================
 "
@@ -43,13 +44,14 @@ call plug#begin('~/.vim/plugged')
   Plug 'honza/vim-snippets'
 
 " Improved JS Highlighting 
-  Plug 'jelera/vim-javascript-syntax'
+  Plug 'othree/yajs.vim'
+  " Plug 'jelera/vim-javascript-syntax'
   " Plug 'pangloss/vim-javascript' ==== Didnt notice any change
 
 " Theme
   " Plug 'kristijanhusak/vim-hybrid-material'
 " DelimitMate (Auto-completion for quotes, parens, brackets etc.)
-  " Plug 'Raimondi/delimitMate'
+  Plug 'Raimondi/delimitMate'
 
 " Syntastic (Syntax checking for various languages)
   " Plug 'scrooloose/syntastic'
@@ -68,6 +70,8 @@ call plug#end()
 " General
   " Set leader key
     let mapleader = "\<Space>"
+  " Set leader key + w to save
+    nnoremap <Leader>w :w<CR>
   " Show line numbers
   " set number
   " Show relative line numbers
@@ -96,12 +100,11 @@ call plug#end()
     " set textwidth=100
     " set colorcolumn=100
   " Highlights all characters after a certain column (115th)
-    augroup vimrc_autocmds
-      autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
-      autocmd BufEnter * match OverLength /\%115v.*/
-     augroup END
-
-     highlight MatchParen ctermfg=red
+    " augroup vimrc_autocmds
+    "   autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
+    "   autocmd BufEnter * match OverLength /\%115v.*/
+    "  augroup END
+    "  highlight MatchParen ctermfg=red
 
 " End General
 
@@ -182,3 +185,5 @@ call plug#end()
   " set background=dark
 
 inoremap <expr> <S-TAB> ((pumvisible())?("\<C-n>"):("j"))
+
+hi MatchParen cterm=bold ctermbg=none  ctermfg=magenta
