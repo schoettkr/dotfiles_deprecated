@@ -29,13 +29,19 @@ call plug#begin('~/.vim/plugged')
   Plug 'Yggdroot/indentLine'
 "
 " Vim Completes Me (Auto-completion)
-  Plug 'ajh17/VimCompletesMe'
+  " Plug 'ajh17/VimCompletesMe'
 
 " L9 Library (Dependency for Autocomplpop)
   Plug 'eparreno/vim-l9'
 " Auto pop up completion suggestions
   Plug 'othree/vim-autocomplpop'
 
+" Vim Snippets
+  Plug 'MarcWeber/vim-addon-mw-utils'
+  Plug 'tomtom/tlib_vim'
+  Plug 'garbas/vim-snipmate'
+  Plug 'honza/vim-snippets'
+  
 " Theme
   " Plug 'kristijanhusak/vim-hybrid-material'
 " DelimitMate (Auto-completion for quotes, parens, brackets etc.)
@@ -168,3 +174,5 @@ call plug#end()
   " let g:hybrid_custom_term_colors = 1
   " colorscheme hybrid
   " set background=dark
+
+inoremap <expr> <S-TAB> ((pumvisible())?("\<C-n>"):("j"))
