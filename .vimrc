@@ -41,7 +41,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'tomtom/tlib_vim'
   Plug 'garbas/vim-snipmate'
   Plug 'honza/vim-snippets'
-  
+
+" Improved JS Highlighting 
+  Plug 'jelera/vim-javascript-syntax'
+  " Plug 'pangloss/vim-javascript' ==== Didnt notice any change
+
 " Theme
   " Plug 'kristijanhusak/vim-hybrid-material'
 " DelimitMate (Auto-completion for quotes, parens, brackets etc.)
@@ -123,8 +127,10 @@ call plug#end()
 " Toggle nerdtree
   map <F7> :NERDTreeToggle<CR>
 " Open Nerdtree on rightside
-  let g:NERDTreeWinPos = "right"
-
+  " let g:NERDTreeWinPos = "right"
+" Use relative line numbers
+  autocmd FileType nerdtree set relativenumber
+  
 " End Nerdtree
 " =====================================
 "
