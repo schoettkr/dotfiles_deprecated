@@ -1,5 +1,4 @@
 " =====================================
-" sdadad
 " Vim Plug
 " =====================================
 "
@@ -31,7 +30,7 @@ call plug#begin('~/.vim/plugged')
 "
 " Vim Completes Me (Auto-completion)
   " Plug 'ajh17/VimCompletesMe'
-
+  " Plug 'Valloric/YouCompleteMe'
 " L9 Library (Dependency for Autocomplpop)
   Plug 'eparreno/vim-l9'
 " Auto pop up completion suggestions
@@ -43,8 +42,18 @@ call plug#begin('~/.vim/plugged')
   Plug 'garbas/vim-snipmate'
   Plug 'honza/vim-snippets'
 
+if $TERM == "xterm-256color"
+    set t_Co=256
+  endif
+
+  " colorscheme base16-material-dark
+  " set background=dark
+
+" Improve JS Omnicomplete
+  " Plug '1995eaton/vim-better-javascript-completion'
+
 " Improved JS Highlighting 
-  Plug 'othree/yajs.vim'
+  " Plug 'othree/yajs.vim'
   " Plug 'jelera/vim-javascript-syntax'
   " Plug 'pangloss/vim-javascript' ==== Didnt notice any change
 
