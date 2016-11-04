@@ -28,6 +28,9 @@ call plug#begin('~/.vim/plugged')
   " Plug 'nathanaelkane/vim-indent-guides'
   Plug 'Yggdroot/indentLine'
 "
+" Theme
+  " colorscheme 
+  Plug 'kristijanhusak/vim-hybrid-material'
 " Vim Completes Me (Auto-completion)
   " Plug 'ajh17/VimCompletesMe'
   " Plug 'Valloric/YouCompleteMe'
@@ -196,3 +199,13 @@ call plug#end()
 inoremap <expr> <S-TAB> ((pumvisible())?("\<C-n>"):("j"))
 
 hi MatchParen cterm=bold ctermbg=none  ctermfg=magenta
+
+
+set background=dark
+colorscheme hybrid_material
+
+:set mouse=c
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+:set guioptions-=r  "remove right-hand scroll bar
+:set guioptions-=L  "remove left-hand scroll bar
