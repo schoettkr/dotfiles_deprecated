@@ -32,6 +32,7 @@ call plug#begin('~/.vim/plugged')
   " colorscheme 
   Plug 'kristijanhusak/vim-hybrid-material'
   Plug 'w0ng/vim-hybrid'
+  Plug 'gwutz/vim-materialtheme'
 " Vim Completes Me (Auto-completion)
   " Plug 'ajh17/VimCompletesMe'
   " Plug 'Valloric/YouCompleteMe'
@@ -202,7 +203,8 @@ hi MatchParen cterm=bold ctermbg=none  ctermfg=magenta
 set background=dark
 " let g:hybrid_reduced_contrast = 1
 " colorscheme hybrid
-colorscheme hybrid_material
+  colorscheme materialtheme
+" colorscheme hybrid_material
 " let g:seoul256_background = 234
 " colorscheme seoul256
 
