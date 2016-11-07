@@ -31,6 +31,7 @@ call plug#begin('~/.vim/plugged')
 " Theme
   " colorscheme 
   Plug 'kristijanhusak/vim-hybrid-material'
+  Plug 'w0ng/vim-hybrid'
 " Vim Completes Me (Auto-completion)
   " Plug 'ajh17/VimCompletesMe'
   " Plug 'Valloric/YouCompleteMe'
@@ -45,10 +46,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'garbas/vim-snipmate'
   Plug 'honza/vim-snippets'
 
-if $TERM == "xterm-256color"
-    set t_Co=256
-  endif
-
+  Plug 'junegunn/seoul256.vim'
   " colorscheme base16-material-dark
   " set background=dark
 
@@ -202,7 +200,11 @@ hi MatchParen cterm=bold ctermbg=none  ctermfg=magenta
 
 
 set background=dark
+" let g:hybrid_reduced_contrast = 1
+" colorscheme hybrid
 colorscheme hybrid_material
+" let g:seoul256_background = 234
+" colorscheme seoul256
 
 :set mouse=c
 :set guioptions-=m  "remove menu bar
