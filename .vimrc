@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 "
 " Single quotes for packages to load!
 "
+Plug 'KevinGoodsell/vim-csexact'
 " Nerdtree (treelike filesystem explorer)
   " Plug 'scrooloose/nerdtree'
 " 
@@ -32,9 +33,9 @@ call plug#begin('~/.vim/plugged')
 "
 " Theme
   " colorscheme 
-  " Plug 'kristijanhusak/vim-hybrid-material'
-  " Plug 'w0ng/vim-hybrid'
-  " Plug 'gwutz/vim-materialtheme'
+  Plug 'kristijanhusak/vim-hybrid-material'
+  Plug 'w0ng/vim-hybrid'
+  Plug 'gwutz/vim-materialtheme'
 " Vim Completes Me (Auto-completion)
   " Plug 'ajh17/VimCompletesMe'
   " Plug 'Valloric/YouCompleteMe'
@@ -118,7 +119,7 @@ call plug#end()
     "   autocmd BufEnter * match OverLength /\%115v.*/
     "  augroup END
     "  highlight MatchParen ctermfg=red
-
+set term=xterm-256color
 " End General
 
 " Omnicomplete
@@ -192,24 +193,24 @@ call plug#end()
 
 " =====================================
 " VIM Theme
-  " set t_Co=256
+  set t_Co=256
+  " set background=dark
   " let g:hybrid_custom_term_colors = 1
   " colorscheme hybrid
-  " set background=dark
 
 inoremap <expr> <S-TAB> ((pumvisible())?("\<C-n>"):("j"))
 
 hi MatchParen cterm=bold ctermbg=none  ctermfg=magenta
 
 
-" set background=dark
+set background=dark
 " let g:hybrid_reduced_contrast = 1
 " colorscheme hybrid
-  " colorscheme materialtheme
+  colorscheme materialtheme
 " colorscheme hybrid_material
 " let g:seoul256_background = 234
 " colorscheme seoul256
-
+" set background=light
 :set mouse=c
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
@@ -217,3 +218,9 @@ hi MatchParen cterm=bold ctermbg=none  ctermfg=magenta
 :set guioptions-=L  "remove left-hand scroll bar
 
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+map <Leader>e :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
+map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
+map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
+
+
+
