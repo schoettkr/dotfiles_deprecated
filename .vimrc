@@ -218,7 +218,7 @@ set background=dark
 :set guioptions-=L  "remove left-hand scroll bar
 
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
-map <Leader>e :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
+map <Leader>e :tabedit <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
 map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 
