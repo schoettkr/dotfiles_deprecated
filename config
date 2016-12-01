@@ -1,0 +1,9 @@
+[colors]
+background = #073642
+foreground = #f2f0ec
+foreground_bold = #f2f0ec
+foreground_dim = #f2f0ec
+cursor     = #d3d0c8
+
+[options]
+font = DejaVu Sans Mono for Powerline 11

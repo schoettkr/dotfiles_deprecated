@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/chinchi/dotfiles/.vim'
-let g:netrw_dirhist_2='/home/chinchi/.config/fish/conf.d'
-let g:netrw_dirhist_3='/home/chinchi/dev/js-the-right-way/public/fa-ir'
-let g:netrw_dirhist_4='/home/chinchi/dev/eloquent-js-excercises'
-let g:netrw_dirhist_5='/home/chinchi/dev/fcc/random-quote-machine'
