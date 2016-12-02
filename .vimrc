@@ -210,6 +210,14 @@ map <Leader>e :tabedit <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
 map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 map <Leader>v :vnew <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
 
+let delimitMate_expand_cr = 1
+" inoremap {<cr> {<cr>}<c-o><s-o>
+" inoremap [<cr> [<cr>]<c-o><s-o>
+" inoremap (<cr> (<cr>)<c-o><s-o>
+
 set noesckeys
 set background=dark
+" colorscheme railscasts
 colorscheme railscasts
+highlight LineNr ctermfg=238
+highlight Statement ctermfg=203
