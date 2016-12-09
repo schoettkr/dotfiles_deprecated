@@ -135,6 +135,7 @@ call plug#end()
 " Experimental
 " =====================================
 
+  set number
 
 " =====================================
 " End Experimental
