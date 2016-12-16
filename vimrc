@@ -23,7 +23,16 @@ call plug#begin('~/.vim/plugged')
   Plug 'tomtom/tlib_vim'
   Plug 'garbas/vim-snipmate'
   Plug 'honza/vim-snippets'
-"
+" Better Indentation for JS and Syntax Highlighting  
+  Plug 'pangloss/vim-javascript'
+" JS Syntax Highlighting
+  Plug 'jelera/vim-javascript-syntax'
+  Plug 'othree/yajs.vim'
+  Plug 'othree/javascript-libraries-syntax.vim'
+" New Omnicomplete Function for JavaScript
+  Plug '1995eaton/vim-better-javascript-completion'
+" Parameter Complete for JS
+  Plug 'othree/jspc.vim'
 call plug#end()
 " =====================================
 " End Vim Plug
@@ -63,7 +72,7 @@ call plug#end()
   " Search while typing
     set incsearch
   " Enable 256 color support
-    set term=xterm-256color
+    " set term=xterm-256color
 " =====================================
 " End General
 " =====================================
@@ -134,9 +143,12 @@ call plug#end()
 " =====================================
 " Experimental
 " =====================================
-
   set number
 
+  map <Leader>ts :split term://zsh<CR>
+  map <Leader>tv :vsplit term://zsh<CR>
+  tnoremap <Esc> <C-\><C-n>
+  :command Q q
 " =====================================
 " End Experimental
 " =====================================
