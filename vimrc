@@ -147,6 +147,7 @@ call plug#end()
 
   map <Leader>ts :split term://zsh<CR>
   map <Leader>tv :vsplit term://zsh<CR>
+  map <Leader>tt :tabedit term://zsh<CR>
   tnoremap <Esc> <C-\><C-n>
   :command Q q
 " =====================================
