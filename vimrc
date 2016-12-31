@@ -96,13 +96,22 @@ call plug#end()
       set t_Co=256
     endif
 " to see the cool fonts
+  " let g:lightline = {
+  "     \ 'colorscheme': 'wombat',
+  "     \ 'component': {
+  "     \   'readonly': '%{&readonly?"":""}',
+  "     \ },
+  "     \ 'separator': { 'left': '', 'right': '' },
+  "     \ 'subseparator': { 'left': '', 'right': '' }
+  "     \ }
+
   let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'component': {
-      \   'readonly': '%{&readonly?"":""}',
+      \   'readonly': '%{&readonly?"":""}',
       \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 " get rid of default vim mode information
   set noshowmode
@@ -117,7 +126,6 @@ call plug#end()
 " =====================================
   hi MatchParen cterm=bold ctermbg=none  ctermfg=magenta
   set background=dark
-  colorscheme railscasts
   highlight LineNr ctermfg=238
   highlight Statement ctermfg=203
 
@@ -149,7 +157,13 @@ call plug#end()
   map <Leader>tv :vsplit term://zsh<CR>
   map <Leader>tt :tabedit term://zsh<CR>
   tnoremap <Esc> <C-\><C-n>
+
   :command Q q
+
+  " colorscheme railscasts
+  " colorscheme flattr
+  " colorscheme cobalt2
+  colorscheme mango
 " =====================================
 " End Experimental
 " =====================================
