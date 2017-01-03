@@ -163,7 +163,10 @@ call plug#end()
   " colorscheme railscasts
   " colorscheme flattr
   " colorscheme cobalt2
-  colorscheme mango
+  " colorscheme mango
+  " colorscheme flatcolor
+  colorscheme last256
+hi Normal ctermbg=none
 " =====================================
 " End Experimental
 " =====================================
