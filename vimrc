@@ -132,8 +132,8 @@ call plug#end()
 " Other
 " =====================================
   " Cycle through suggestions with tab
-  inoremap <expr> <TAB> ((pumvisible())?("\<C-n>"):("j"))
-  inoremap <expr> <S-TAB> ((pumvisible())?("\<C-p>"):("j"))
+  inoremap <expr> <TAB> ((pumvisible())?("\<C-n>"):("<TAB>"))
+  inoremap <expr> <S-TAB> ((pumvisible())?("\<C-p>"):(""))
   " Open files
   map <Leader>e :tabedit <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
   map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
