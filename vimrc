@@ -132,7 +132,8 @@ call plug#end()
 " Other
 " =====================================
   " Cycle through suggestions with tab
-  inoremap <expr> <S-TAB> ((pumvisible())?("\<C-n>"):("j"))
+  inoremap <expr> <TAB> ((pumvisible())?("\<C-n>"):("j"))
+  inoremap <expr> <S-TAB> ((pumvisible())?("\<C-p>"):("j"))
   " Open files
   map <Leader>e :tabedit <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
   map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
@@ -161,8 +162,6 @@ call plug#end()
   :command Q q
 
   " colorscheme railscasts
-  " colorscheme flattr
-  " colorscheme cobalt2
   " colorscheme mango
   " colorscheme flatcolor
   colorscheme last256
