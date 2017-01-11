@@ -33,6 +33,7 @@ call plug#begin('~/.vim/plugged')
   Plug '1995eaton/vim-better-javascript-completion'
 " Parameter Complete for JS
   Plug 'othree/jspc.vim'
+
 call plug#end()
 " =====================================
 " End Vim Plug
@@ -132,8 +133,8 @@ call plug#end()
 " Other
 " =====================================
   " Cycle through suggestions with tab
-  inoremap <expr> <TAB> ((pumvisible())?("\<C-n>"):("<TAB>"))
-  inoremap <expr> <S-TAB> ((pumvisible())?("\<C-p>"):(""))
+  inoremap <expr> <S-J> ((pumvisible())?("\<C-n>"):("J"))
+  inoremap <expr> <S-K> ((pumvisible())?("\<C-p>"):("K"))
   " Open files
   map <Leader>e :tabedit <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
   map <Leader>s :split <C-R>=escape(expand("%:p:h"), ' ') . '/'<CR>
@@ -169,6 +170,7 @@ call plug#end()
 
   " imap <Tab> <Plug>snipMateNextOrTrigger
   " smap <C-J> <Plug>snipMateNextOrTrigger
+  " hi jsFuncCall            guifg=NONE   guibg=203   gui=BOLD
 " =====================================
 " End Experimental
 " =====================================
