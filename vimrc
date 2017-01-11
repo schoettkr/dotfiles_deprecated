@@ -165,7 +165,10 @@ call plug#end()
   " colorscheme mango
   " colorscheme flatcolor
   colorscheme last256
-hi Normal ctermbg=none
+  hi Normal ctermbg=none
+
+  " imap <Tab> <Plug>snipMateNextOrTrigger
+  " smap <C-J> <Plug>snipMateNextOrTrigger
 " =====================================
 " End Experimental
 " =====================================
