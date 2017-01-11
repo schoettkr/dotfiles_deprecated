@@ -125,10 +125,7 @@ call plug#end()
 
 " Colorscheme Settings
 " =====================================
-  hi MatchParen cterm=bold ctermbg=none  ctermfg=magenta
   set background=dark
-  highlight LineNr ctermfg=238
-  highlight Statement ctermfg=203
 
 " Other
 " =====================================
@@ -167,10 +164,26 @@ call plug#end()
   " colorscheme flatcolor
   colorscheme last256
   hi Normal ctermbg=none
+  " hi MatchParen cterm=bold ctermbg=none  ctermfg=magenta
+  " highlight LineNr ctermfg=238
+  " highlight Statement ctermfg=032
+  hi jsFuncCall ctermfg=031
+  hi jsFuncName ctermfg=158
+  " hi jsFuncBlock ctermfg=015
+  " hi jsOperator ctermfg=015
+  hi jsGlobalObjects ctermfg=175
 
   " imap <Tab> <Plug>snipMateNextOrTrigger
   " smap <C-J> <Plug>snipMateNextOrTrigger
   " hi jsFuncCall            guifg=NONE   guibg=203   gui=BOLD
+
+nmap <leader>sp :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 " =====================================
 " End Experimental
 " =====================================
