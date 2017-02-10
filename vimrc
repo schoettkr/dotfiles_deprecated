@@ -97,23 +97,25 @@ call plug#end()
       set t_Co=256
     endif
 " to see the cool fonts
-  " let g:lightline = {
-  "     \ 'colorscheme': 'wombat',
-  "     \ 'component': {
-  "     \   'readonly': '%{&readonly?"":""}',
-  "     \ },
-  "     \ 'separator': { 'left': '', 'right': '' },
-  "     \ 'subseparator': { 'left': '', 'right': '' }
-  "     \ }
-
+" with powerline symbol support
   let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'component': {
-      \   'readonly': '%{&readonly?"":""}',
+      \   'readonly': '%{&readonly?"":""}',
       \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
       \ }
+
+" without powerline symbol support
+  " let g:lightline = {
+  "     \ 'colorscheme': 'wombat',
+  "     \ 'component': {
+  "     \   'readonly': '%{&readonly?"":""}',
+  "     \ },
+  "     \ 'separator': { 'left': '', 'right': '' },
+  "     \ 'subseparator': { 'left': '', 'right': '' }
+  "     \ }
 " get rid of default vim mode information
   set noshowmode
 " make backgroundcolor of statusline match terminal

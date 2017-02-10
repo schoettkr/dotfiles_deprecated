@@ -87,4 +87,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="/home/chinchi/.gem/ruby/2.3.0/bin:$PATH"
+# export PATH="$HOME/.gem/ruby/2.3.0/bin:$PATH"
+# export PATH="$HOME/.gem/ruby/2.3.0/bin:sass-3.4.22"
 alias vim=nvim

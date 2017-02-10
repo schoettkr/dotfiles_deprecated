@@ -1,13 +1,13 @@
 # Solarized dark color scheme
 
 [options]
-# font = Input Mono 11
-font = Consolas for Powerline 12
-# font = Roboto Mono for Powerline 11
-# font = Office Code Pro 12
 # font = DejaVu Sans Mono for Powerline 11
-# font = SFMono 11
+font = Roboto Mono for Powerline 11
 # font = mononoki 12
+# font = Input Mono 11
+# font = Consolas for Powerline 12
+# font = Office Code Pro 11
+# font = SFMono 11
 
 [colors]
 
