@@ -162,9 +162,9 @@ call plug#end()
   :command Q q
 
   " colorscheme railscasts
-  " colorscheme mango
+  colorscheme mango
   " colorscheme flatcolor
-  colorscheme last256
+  " colorscheme last256
   hi Normal ctermbg=none
   " hi MatchParen cterm=bold ctermbg=none  ctermfg=magenta
   " highlight LineNr ctermfg=238
