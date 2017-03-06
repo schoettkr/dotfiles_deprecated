@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 "
 " Colorscheme pack
   Plug 'noah/vim256-color'
+  Plug 'tyrannicaltoucan/vim-quantum'
 " Commentary (toggle comments with gcc)
   Plug 'tpope/vim-commentary'
 " Lightline (statusline/tabline)
@@ -97,23 +98,23 @@ call plug#end()
       set t_Co=256
     endif
 " to see the cool fonts
-  " let g:lightline = {
-  "     \ 'colorscheme': 'wombat',
-  "     \ 'component': {
-  "     \   'readonly': '%{&readonly?"":""}',
-  "     \ },
-  "     \ 'separator': { 'left': '', 'right': '' },
-  "     \ 'subseparator': { 'left': '', 'right': '' }
-  "     \ }
-
   let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'component': {
-      \   'readonly': '%{&readonly?"":""}',
+      \   'readonly': '%{&readonly?"":""}',
       \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
       \ }
+
+  " let g:lightline = {
+  "     \ 'colorscheme': 'wombat',
+  "     \ 'component': {
+  "     \   'readonly': '%{&readonly?"":""}',
+  "     \ },
+  "     \ 'separator': { 'left': '', 'right': '' },
+  "     \ 'subseparator': { 'left': '', 'right': '' }
+  "     \ }
 " get rid of default vim mode information
   set noshowmode
 " make backgroundcolor of statusline match terminal
@@ -162,16 +163,17 @@ call plug#end()
   " colorscheme railscasts
   " colorscheme mango
   " colorscheme flatcolor
-  colorscheme last256
+  " colorscheme last256
+  colorscheme quantum
   hi Normal ctermbg=none
   " hi MatchParen cterm=bold ctermbg=none  ctermfg=magenta
   " highlight LineNr ctermfg=238
   " highlight Statement ctermfg=032
-  hi jsFuncCall ctermfg=031
-  hi jsFuncName ctermfg=158
+  " hi jsFuncCall ctermfg=031
+  " hi jsFuncName ctermfg=158
   " hi jsFuncBlock ctermfg=015
   " hi jsOperator ctermfg=015
-  hi jsGlobalObjects ctermfg=175
+  " hi jsGlobalObjects ctermfg=175
 
   " imap <Tab> <Plug>snipMateNextOrTrigger
   " smap <C-J> <Plug>snipMateNextOrTrigger
