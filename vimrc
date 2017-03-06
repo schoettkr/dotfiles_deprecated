@@ -166,6 +166,8 @@ call plug#end()
   " colorscheme last256
   colorscheme quantum
   hi Normal ctermbg=none
+  let g:quantum_italics = 1
+  let g:quantum_black = 1
   " hi MatchParen cterm=bold ctermbg=none  ctermfg=magenta
   " highlight LineNr ctermfg=238
   " highlight Statement ctermfg=032
