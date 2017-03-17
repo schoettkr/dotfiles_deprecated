@@ -1,0 +1,1 @@
+/home/chinchi/.vim/vimrc
