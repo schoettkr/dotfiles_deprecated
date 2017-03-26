@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/chinchi/notes'
-let g:netrw_dirhist_2='/home/chinchi/dev/M101x/ch1-solutions/5-examples'
-let g:netrw_dirhist_3='/home/chinchi/dev/M101x/chapter-2/homework'
-let g:netrw_dirhist_4='/home/chinchi/.oh-my-zsh'
-let g:netrw_dirhist_5='/home/chinchi/.ssh'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/chinchi/Dev'
+let g:netrw_dirhist_2='/home/chinchi/Dev/Pomodoro-Clock'
+let g:netrw_dirhist_3='/home/chinchi/Dev'
+let g:netrw_dirhist_4='/home/chinchi/Dev/Pomodoro-Clock'
+let g:netrw_dirhist_5='/home/chinchi/Dev'
+let g:netrw_dirhist_6='/home/chinchi/Dev/Pomodoro-Clock'
