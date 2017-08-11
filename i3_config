@@ -1,0 +1,226 @@
+# # Set mod key (Mod1=Alt, Mod4=Super)
+set $mod Mod1
+
+# # Executions
+exec_always ./.monitor.sh
+exec compton --config ~/.config/compton.conf
+exec xmodmap ~/.xmodmap
+exec_always feh --bg-scale /home/chinchi/Pictures/image3.jpg
+exec sleep 1 && feh --bg-scale /home/chinchi/Pictures/image3.jpg
+exec redshift
+# exec xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
+# exec --no-startup-id redshift-gtk
+
+# # KEYBINDINGS
+# # toggle tiling / floating
+bindsym $mod+f floating toggle
+bindsym $mod+t exec --no-startup-id "i3-msg 'workspace 3; append_layout /home/chinchi/.config/i3/terminals.json'"
+bindsym $mod+i layout stacking
+bindsym $mod+o layout tabbed
+bindsym $mod+p layout toggle split
+bindsym $mod+Return exec termite # -e tmux
+bindsym $mod+r exec subl3
+bindsym $mod+Shift+q kill
+bindsym $mod+q kill
+bindsym $mod+x kill
+bindsym $mod+d exec dmenu_run -nb '#604080' -fn 'pango'
+# bindsym $mod+r exec termite -e ranger
+# bindsym $mod+F1 exec google-chrome-stable
+bindsym $mod+F1 exec firefox
+bindsym $mod+F2 exec pcmanfm
+bindsym $mod+e exec emacs
+# bindsym $mod+F3 exec google-chrome-stable opt/google/chrome/google-chrome --profile-directory=Default --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+s mode "resize"
+bindsym $mod+v split toggle
+# bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+g gaps inner all set 0, gaps outer all set 0
+bindsym $mod+plus gaps inner all plus 5, gaps outer all plus 5
+bindsym $mod+minus gaps inner all minus 5, gaps outer all minus 5
+
+######################################################
+# # # Other Settings # # #
+######################################################
+workspace 1 output HDMI-1
+font pango:DejaVu Sans 10
+new_window pixel 0
+# gaps inner 5
+# gaps outer 5
+# # Workspace Variables
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+# # Move focused container to workspace
+bindsym $mod+Ctrl+1 move container to workspace $ws1
+bindsym $mod+Ctrl+2 move container to workspace $ws2
+bindsym $mod+Ctrl+3 move container to workspace $ws3
+bindsym $mod+Ctrl+4 move container to workspace $ws4
+bindsym $mod+Ctrl+5 move container to workspace $ws5
+bindsym $mod+Ctrl+6 move container to workspace $ws6
+bindsym $mod+Ctrl+7 move container to workspace $ws7
+bindsym $mod+Ctrl+8 move container to workspace $ws8
+# # Move to workspace with focused container
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+# # Switch workspaces
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+# # Colors
+# set $bg-color            #2f343f
+# set $bg-color            #604080
+set $bg-color            #063D48
+set $inactive-bg-color            #063D48
+# set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+client.focused          #ffffff           $bg-color          $text-color          #00ff00
+client.unfocused        #ffffff  $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive #ffffff  $inactive-bg-color $inactive-text-color #00ff00
+client.urgent           #ffffff    $urgent-bg-color   $text-color          #00ff00
+# # Modes
+mode "resize" {
+  bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
+# back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bar {
+  status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    separator_symbol " | "
+    position top
+    workspace_buttons yes
+    colors {
+      background $bg-color
+# separator #757575
+#                  border             background         text
+        focused_workspace  $bg-color          $bg-color          $text-color
+        inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+    }
+}
+
+######################################################
+# # # Old Comments # # #
+######################################################
+# # Font for window titles. Will also be used by the bar unless a different font
+# # is used in the bar {} block below.
+# # Hide borders
+# hide_edge_borders none
+# for_window [class="^.*"] border pixel 0
+# new_window pixel 0
+# # This font is widely installed, provides lots of unicode glyphs, right-to-left
+# # text rendering and scalability on retina/hidpi displays (thanks to pango).
+#font pango:DejaVu Sans Mono 8
+# # Before i3 v4.8, we used to recommend this one as the default:
+# # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# # The font above is very space-efficient, that is, it looks good, sharp and
+# # clear in small sizes. However, its unicode glyph coverage is limited, the old
+# # X core fonts rendering does not support right-to-left and this being a bitmap
+# # font, it doesn’t scale on retina/hidpi displays.
+# # Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+# # start a terminal
+# -e fish
+# # kill focused window
+# # start rofi (a program launcher)
+## bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -fullscreen -width 100 -padding 400 -bw 0 -line-margin 0 -hide-scrollbar
+# -show run -width 100 -padding 800 -lines 3 -eh 2  -bw 0 
+# # launch categorized menu
+# bindsym $mod+z exec morc_menu
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# Toggle split direction
+# # split in horizontal orientation
+# # bindsym $mod+h split h
+# # split in vertical orientation
+# #bindsym $mod+v split v
+# # enter fullscreen mode for the focused container
+# # change container layout (stacked, tabbed, toggle split)
+# # focus the parent container
+# bindsym $mod+a focus parent
+# # focus the child container
+# #bindsym $mod+d focus child
+# # reload the configuration file
+# # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# # exit i3 (logs you out of your X session)
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# # Workspace names
+# # to display names or symbols instead of plain workspace numbers you can use
+# # something like: set $ws1 1:mail
+# #                 set $ws2 2:
+# # switch to workspace
+# # Open applications on specific workspaces
+# # assign [class="Thunderbird"] $ws1
+# # assign [class="Pale moon"] $ws2
+# # assign [class="Pcmanfm"] $ws3
+# # assign [class="Skype"] $ws5
+# assign [class="Firefox"] $ws1
+# assign [class="Pcmanfm"] $ws4
+# assign [class="Google-chrome"] $ws5
+# assign [class="crx_kfbnhhcmmpmjfkkakaplojljcodkmobo"] $ws5
+# exec_always xrdb ~/.Xresources
+# exec google-chrome-stable opt/google/chrome/google-chrome --profile-directory=Default --app-id=kfbnhhcmmpmjfkkakaplojljcodkmobo
+# exec compton -f --config ~/.compton.conf --backend xrender
+# exec compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --shadow-exclude "! name~=''" --config ~/.compton.conf -b &
+# --xrender-sync --xrender-sync-fence 
+# Set inner/outer gaps
+# gaps inner 5
+# gaps outer 5
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+#gaps
+gaps inner 27
+gaps outer 15
+for_window [class="^.*"] border pixel 3
+set $back #444040
+set $urg #e06c75
+set $green #60bfbf
+set $accent #604080
+# set $green #98c379
+# set $accent #d6ab77
+
+#colors
+#class                  border  background  text    indicator       child_border
+client.focused          $green  $green      $back   $accent
+client.focused_inactive $green  $green      $back   $back
+client.unfocused        $back   $back       $green  $back
+client.urgent           $urg    $urg        $back   $back
+smart_borders on
+# smart_gaps on
+# # change focus between tiling / floating windows
+# bindsym $mod+space focus mode_toggle
