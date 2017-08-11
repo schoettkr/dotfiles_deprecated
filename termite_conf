@@ -1,0 +1,65 @@
+[options]
+# Standard
+# font = Office Code Pro 11
+font = Fantasque Sans Mono 12
+# font = Inconsolata 12
+
+
+# font = Input Mono 11
+# font = Consolas for Powerline 12
+# font = Roboto Mono for Powerline 11
+# font = DejaVu Sans Mono for Powerline 11
+# font = DejaVu Sans Mono 11
+# font = SFMono 11
+# font = mononoki 12
+# font = Monaco for Powerline 11
+# font = Fira Code Light 11
+### THIS IS BEST
+# font = Source Code Pro Regular 11
+# font = SauceCodePro Nerd Font Regular 11
+# font = Fira Mono 11
+# font = Operator Mono Light 11
+
+[colors]
+
+# special
+foreground      = #eceff1
+foreground_bold = #eceff1
+cursor          = #e91e63
+# background      = #263238
+# Arch Dark 
+# background      = rgb(47,52,63)
+background = #263238
+# background      = rgba(47,52,63, 0.8)
+
+# black
+color0  = #263238
+color8  = #37474f
+
+# red
+color1  = #ff9800
+color9  = #ffa74d
+
+# green
+color2  = #8bc34a
+color10 = #9ccc65
+
+# yellow
+color3  = #ffc107
+color11 = #ffa000
+
+# blue
+color4  = #03a9f4
+color12 = #81d4fa
+
+# magenta
+color5  = #e91e63
+color13 = #ad1457
+
+# cyan
+color6  = #009688
+color14 = #26a69a
+
+# white
+color7  = #cfd8dc
+color15 = #eceff1
